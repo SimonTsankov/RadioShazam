@@ -1,14 +1,42 @@
-import { Component } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {MatSidenav} from "@angular/material/sidenav";
+import {BreakpointObserver} from "@angular/cdk/layout";
+import {delay} from "rxjs/operators";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'RadioShazam';
+  @ViewChild(MatSidenav)
+  sidenav!: MatSidenav;
+  component: string="";
 
-  constructor() {
+  constructor(private router: Router,private observer: BreakpointObserver) {
     console.log("HOORAAY")
   }
+
+
+  ngOnInit(): void {
+
+    this.observer
+      .observe(['(max-width: 800px)'])
+      .pipe(delay(1))
+      .subscribe((res) => {
+          this.sidenav.open();
+      });
+  }
+
+  clickTest() {
+    console.log("clicked!")
+    this.router.navigate(["/login"]);
+  }
+
+  changePage(route: string) {
+    this.router.navigate(["/"+route]);
+  }
+
 }
