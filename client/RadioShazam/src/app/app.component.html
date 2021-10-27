@@ -1,6 +1,6 @@
 <mat-toolbar class="mat-elevation-z8">
   <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
-    <mat-icon *ngIf="!sidenav.opened">
+    <mat-icon  *ngIf="!sidenav.opened">
       menu
     </mat-icon>
     <mat-icon *ngIf="sidenav.opened">
@@ -10,8 +10,8 @@
   <h1>
     Radio Shazam!
   </h1>
-  <button (click)="changePage('login')" class="loginBtn" mat-raised-button>Login!</button>
-  <button class="registerBtn" mat-raised-button>Register</button>
+  <button [routerLink]="'login'" class="loginBtn" mat-raised-button>Login!</button>
+  <button [routerLink]="'register'" class="registerBtn" mat-raised-button>Register</button>
 </mat-toolbar>
 
 <mat-sidenav-container>
@@ -25,19 +25,19 @@
 
     <mat-divider></mat-divider>
 
-    <button (click)="changePage('home')" mat-button class="menu-button, colorFulButton">
+    <button [routerLink]="'home'" mat-button class="menu-button, colorFulButton">
       <mat-icon>home</mat-icon>
       <span>Home</span>
     </button>
     <br>
-    <button (click)="changePage('profile')" mat-button class="menu-button, colorFulButton">
+    <button [routerLink]="'login'" mat-button class="menu-button, colorFulButton">
       <mat-icon>person</mat-icon>
       <span>Profile</span>
     </button>
     <br>
     <div class="bg-image hover-overlay">
 
-      <button (click)=" changePage('playlists')" mat-button class="menu-button, colorFulButton">
+      <button [routerLink]="'playlists'" mat-button class="menu-button, colorFulButton">
         <mat-icon  >library_music</mat-icon>
         <span>Playlists</span>
       </button>
@@ -45,12 +45,12 @@
     </div>
     <mat-divider style="background-color: #006b1b;"></mat-divider>
 
-    <button mat-button class="menu-button">
+    <button [routerLink]="'about'" mat-button class="menu-button">
       <mat-icon>info</mat-icon>
       <span>About</span>
     </button>
     <br>
-    <button mat-button class="menu-button">
+    <button [routerLink]="'help'" mat-button class="menu-button">
       <mat-icon>help</mat-icon>
       <span>Help</span>
     </button>
@@ -58,6 +58,7 @@
   </mat-sidenav>
   <mat-sidenav-content style="background-color: #b0cefa">
     <div style="background-color: white" class="content mat-elevation-z8">
+
         <router-outlet></router-outlet>
     </div>
   </mat-sidenav-content>
