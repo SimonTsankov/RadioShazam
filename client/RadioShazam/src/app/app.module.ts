@@ -10,12 +10,14 @@ import {MatDividerModule} from "@angular/material/divider";
 import {RouterModule} from "@angular/router";
 import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app-routing.module';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   exports: [ RouterModule ],
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
