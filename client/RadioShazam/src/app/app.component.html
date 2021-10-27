@@ -1,6 +1,10 @@
-<mat-toolbar class="mat-elevation-z8">
+<mat-toolbar class="mat-elevation-z8" style=" background: linear-gradient(
+             45deg,
+              #002b5c ,
+             rgba(40,163,224,0.5)120%
+             );">
   <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
-    <mat-icon  *ngIf="!sidenav.opened">
+    <mat-icon *ngIf="!sidenav.opened">
       menu
     </mat-icon>
     <mat-icon *ngIf="sidenav.opened">
@@ -38,7 +42,7 @@
     <div class="bg-image hover-overlay">
 
       <button [routerLink]="'playlists'" mat-button class="menu-button, colorFulButton">
-        <mat-icon  >library_music</mat-icon>
+        <mat-icon>library_music</mat-icon>
         <span>Playlists</span>
       </button>
       <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
@@ -56,10 +60,11 @@
     </button>
 
   </mat-sidenav>
-  <mat-sidenav-content style="background-color: #b0cefa">
+  <mat-sidenav-content style="background-color: #e5eeff">
     <div style="background-color: white" class="content mat-elevation-z8">
+<!--      The components (login/register/home) will be loaded here -->
+      <router-outlet></router-outlet>
 
-        <router-outlet></router-outlet>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
