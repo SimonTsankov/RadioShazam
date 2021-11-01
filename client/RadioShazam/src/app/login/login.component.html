@@ -1,33 +1,36 @@
-<div class="title-container">
-  <label class="title"><b>E-mail: </b></label>
+<div>
+  <label class="title"><b>Login : </b></label>
 </div>
-<div class="input-container">
-  <input class="border" type="text">
+<div class="loginFields">
+  <form [formGroup]="signin" class="form" style="font-size: medium">
+    <mat-form-field class="full-width" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input  type="email" matInput formControlName="email" [errorStateMatcher]="matcher">
+
+      <mat-hint *ngIf="!email.hasError('required')" style=" color: green">Valid email!</mat-hint>
+      <mat-error *ngIf="email.hasError('email') && !signin.hasError('required')">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="email.hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+
+    </mat-form-field>
+
+    <mat-form-field class="full-width" style="margin-top: 5%">
+      <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" formControlName="password" required>
+      <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+
+      <mat-hint *ngIf="!password.hasError('required')"> Enter
+        your password
+      </mat-hint>
+      <mat-error *ngIf="password.hasError('minlength')">Cant be that short</mat-error>
+
+    </mat-form-field>
+  </form>
+  <button style="margin-left: 50%" mat-raised-button (click)="login()">Login</button>
+  <br>
+
+  <button class="forgottenPasswordButton">Forgotten Password?</button>
+
 </div>
-
-<div class="title-container">
-  <label class="title"><b>Password: </b></label>
-</div>
-<div class="input-container">
-  <input class="border" type="password">
-</div>
-
-<div class="title-container">
-  <label class="title"><b>Confirm Passowrd: </b></label>
-</div>
-<div class="input-container">
-  <input class="border" type="password">
-</div>
-
-<div class="loginButton">
-
-  <button mat-raised-button>Login</button>
-
-</div>
-
-<div class="forgottenPasswordButton">
-
-  <button mat-stroked-button>Forgotten Password?</button>
-
-</div>
-

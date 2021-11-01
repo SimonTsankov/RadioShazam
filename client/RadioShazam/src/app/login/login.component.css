@@ -1,15 +1,67 @@
-.title{
-color:#000;
+mat-toolbar {
+  background: #004a9f;
+  color: white;
+  height: 10%;
 }
-.input-container{
-width: 100%;
-  padding: 2px 3px;
-  margin: 5px 0;
-  box-sizing: border-box;
-  }
 
-.loginButton{
+mat-sidenav {
+  margin: 16px;
+  width: 225px;
+  border-right: none;
+  background: #002b5c;
+  color: white;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.content {
+  height: calc(100vh - 98px);
+  border-radius: 10px;
+  margin: 16px;
+  margin-left: 32px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2rem;
+  color: lightgray;
+  /*background-color: #4ac1f7;*/
+}
+
+mat-sidenav-container {
+  height: calc(100vh - 65px);
+}
+
+.loginBtn {
+  background: linear-gradient(
+    45deg,
+    rgba(0, 73, 255, 0.5),
+    rgba(59, 3, 146, 0.5) 100%
+  );
+  color: white;
+  margin-right: 1%;
+}
+
+.registerBtn {
+  background: linear-gradient(
+    45deg,
+    rgba(0, 73, 255, 0.5),
+    rgba(59, 3, 146, 0.5) 100%
+  );
+  margin-right: 2%;
+
+  color: white;
 
 }
-.forgottenPasswordButton{
+
+.colorFulButton {
+  background: linear-gradient(
+    45deg,
+    rgba(29, 236, 197, 0.5),
+    rgba(91, 14, 214, 0.5) 100%
+  );
+  width: 70%;
+  margin-bottom: 4%;
 }
