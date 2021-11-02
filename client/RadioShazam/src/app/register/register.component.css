@@ -11,11 +11,13 @@
   color: #1800f8
 }
 .mat-form-field{
-  color: #006b1b;
-  text-decoration-color: #006b1b;
+  color:rgba(43, 2, 75, 0.69);
 }
-.mat-label{
-  text-decoration-color: #006b1b;
+.mat-labelCustom{
+  color: rgba(43, 2, 75, 0.69);
+}
+.mat-hint{
+color: rgba(43, 2, 75, 0.69);
 }
 .registerFields {
   border-radius: 25px;
