@@ -1,67 +1,35 @@
-mat-toolbar {
-  background: #004a9f;
-  color: white;
-  height: 10%;
+:host {
+  width: 50%;
+  margin-right: 8%;
+  height: 90%;
 }
 
-mat-sidenav {
-  margin: 16px;
-  width: 225px;
-  border-right: none;
-  background: #002b5c;
-  color: white;
-  border-radius: 10px;
-  padding: 16px;
-  text-align: center;
+.forgottenPasswordButton {
+  border: transparent;
+  background-color: transparent;
+  color: #1800f8
 }
 
-.content {
-  height: calc(100vh - 98px);
-  border-radius: 10px;
-  margin: 16px;
-  margin-left: 32px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  font-size: 2rem;
-  color: lightgray;
-  /*background-color: #4ac1f7;*/
-}
-
-mat-sidenav-container {
-  height: calc(100vh - 65px);
-}
-
-.loginBtn {
+.loginFields {
+  border-radius: 25px;
+  width: 100%;
+  padding: 15%;
+  padding-right: 3%;
   background: linear-gradient(
     45deg,
-    rgba(0, 73, 255, 0.5),
-    rgba(59, 3, 146, 0.5) 100%
+    rgba(24, 69, 149, 0.74),
+    rgba(40, 163, 224, 0.5) 120%
   );
-  color: white;
-  margin-right: 1%;
 }
 
-.registerBtn {
-  background: linear-gradient(
-    45deg,
-    rgba(0, 73, 255, 0.5),
-    rgba(59, 3, 146, 0.5) 100%
-  );
-  margin-right: 2%;
 
-  color: white;
+.form {
+  min-width: 50px;
+  max-width: 500px;
+  width: 100%;
 
 }
 
-.colorFulButton {
-  background: linear-gradient(
-    45deg,
-    rgba(29, 236, 197, 0.5),
-    rgba(91, 14, 214, 0.5) 100%
-  );
-  width: 70%;
-  margin-bottom: 4%;
+.full-width {
+  width: 100%;
 }

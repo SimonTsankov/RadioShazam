@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   component: string="";
 
   constructor(private router: Router,private observer: BreakpointObserver) {
-    console.log("HOORAAY")
+    console.log("Yoohoo")
   }
 
 
