@@ -3,24 +3,27 @@ import {FormControl, FormGroup, FormGroupDirective, NgForm, Validators} from '@a
 import {ErrorStateMatcher} from '@angular/material/core';
 
 
-
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
 })
-export class LoginComponent implements OnInit {
+export class RegisterComponent implements OnInit {
+  matcher = new MyErrorStateMatcher();
 
   email = new FormControl('', [Validators.email, Validators.required])
   password = new FormControl('', [Validators.required, Validators.minLength(3)])
-  matcher = new MyErrorStateMatcher();
+  passwordConfirm = new FormControl('', [Validators.required, Validators.minLength(3)])
+  username= new FormControl('', [Validators.minLength(4), Validators.required]);
 
   signin: FormGroup = new FormGroup({
-    email:this.email,
-    password: this.password
+    email: this.email,
+    password: this.password,
+    username: this.username,
+    passwordConfirm: this.passwordConfirm
   });
-
   hide = true;
+
   constructor() {
 
     // @ts-ignore
@@ -32,19 +35,11 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  get emailInput() {
-    return this.signin.get('email');
-  }
-  get passwordInput() {
-    return this.signin.get('password');
-  }
+  register() {
 
-  login() {
-
-    //TODO: this.loginService.doLogin(email.value, password.value)
+    //TODO: this.registerService.doRegister(email.value, password.value, username)
   }
 }
-
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
     const isSubmitted = form && form.submitted;

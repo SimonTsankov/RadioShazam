@@ -1,11 +1,12 @@
 mat-toolbar {
   background: #004a9f;
   color: white;
+  height: 10%;
 }
 
 mat-sidenav {
   margin: 16px;
-  width: 200px;
+  width: 225px;
   border-right: none;
   background: #002b5c;
   color: white;
@@ -26,6 +27,7 @@ mat-sidenav {
 
   font-size: 2rem;
   color: lightgray;
+  /*background-color: #4ac1f7;*/
 }
 
 mat-sidenav-container {
@@ -42,4 +44,13 @@ mat-sidenav-container {
   background-color: #8aadff;
   color: white;
   margin-left: 1%;
+}
+.colorFulButton{
+  background: linear-gradient(
+    45deg,
+    rgba(29, 236, 197, 0.5),
+    rgba(91, 14, 214, 0.5) 100%
+  );
+  width: 70%;
+  margin-bottom: 4%;
 }

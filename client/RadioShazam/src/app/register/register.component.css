@@ -5,16 +5,23 @@
 }
 
 .forgottenPasswordButton {
+  margin-left: 10%;
   border: transparent;
   background-color: transparent;
   color: #1800f8
 }
-
+.mat-form-field{
+  color: #006b1b;
+  text-decoration-color: #006b1b;
+}
+.mat-label{
+  text-decoration-color: #006b1b;
+}
 .registerFields {
   border-radius: 25px;
   width: 100%;
   padding: 15%;
-  padding-right: 3%;
+  padding-right: 0%;
   background: linear-gradient(
     45deg,
     rgba(24, 69, 149, 0.74),
