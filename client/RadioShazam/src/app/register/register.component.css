@@ -31,6 +31,9 @@ color: rgba(43, 2, 75, 0.69);
   );
 }
 
+.title{
+  color: #008d29;
+}
 
 .form {
   min-width: 50px;

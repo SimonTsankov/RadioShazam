@@ -15,6 +15,7 @@
         Email is <strong>required</strong>
       </mat-error>
     </mat-form-field>
+
 <!--    USERNAME-->
     <mat-form-field class="full-width" appearance="fill">
       <mat-label class="mat-labelCustom">Username<small>*</small></mat-label>
@@ -46,6 +47,6 @@
   <button style="margin-left: 63%" mat-raised-button (click)="register()">Register</button>
   <br>
 
-  <button class="forgottenPasswordButton">Already have a profile?</button>
+  <button (click)="changePath('login')" class="forgottenPasswordButton">Already have an account?</button>
 
 </div>
